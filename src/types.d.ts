@@ -18,6 +18,13 @@ interface Encryption {
 
 interface NDEFRecord {
   recordType: string;
-  mediaType: string;
+  mediaType?: string;
   data: string | DataView;
+}
+
+interface WifiRecordPayload {
+  ssid: string;
+  pass: string;
+  auth: keyof Authentication;
+  ecyp: keyof Encryption;
 }

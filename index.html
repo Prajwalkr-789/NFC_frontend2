@@ -7,10 +7,64 @@
     <title>Vite + TS</title>
   </head>
   <body>
-    <div id="app"></div>
-    <button id="read-btn">Read</button>
-    <button id="write-btn">Write</button>
-    <div id="log"></div>
+    <button id="grant-btn">Grant NFC Access</button>
+    <div id="app">
+      <div class="tab">
+        <button
+          class="tablinks"
+          id="defaultOpen"
+          onclick="openTab(event, 'wifi')"
+        >
+          Wifi
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'url')">Url</button>
+        <button class="tablinks" onclick="openTab(event, 'read')">Read</button>
+      </div>
+      <div id="wifi" class="tabcontent">
+        <h4>Write Wifi connection to NFC tag</h4>
+        <form id="wifi-form">
+          <label for="ssid">SSID</label>
+          <input id="ssid" name="ssid" type="text" required />
+          <label for="pass">Password</label>
+          <input id="pass" name="pass" type="text" required />
+
+          <label for="auth">Authentication </label>
+          <select id="auth" name="auth" required>
+            <option value="WPA/WP2 PERSONAL">WPA/WP2 PERSONAL</option>
+            <option value="OPEN">OPEN</option>
+            <option value="SHARED">SHARED</option>
+            <option value="WPA PERSONAL">WPA PERSONAL</option>
+            <option value="WPA2 PERSONAL">WPA2 PERSONAL</option>
+            <option value="WPA ENTERPRISE">WPA ENTERPRISE</option>
+            <option value="WPA2 ENTERPRISE">WPA2 ENTERPRISE</option>
+          </select>
+          <label for="ecyp">Encryption </label>
+          <select id="ecpy" name="ecyp" required>
+            <option value="NONE">NONE</option>
+            <option value="WEP">WEP</option>
+            <option value="AES">AES</option>
+            <option value="TKIP">TKIP</option>
+            <option value="AES/TKIP">AES/TKIP</option>
+          </select>
+          <button type="submit">Write</button>
+        </form>
+      </div>
+
+      <div id="url" class="tabcontent">
+        <h4>Write a URL to an NFC tag</h4>
+        <form id="url-form">
+          <label for="link">URL</label>
+          <input id="link" name="url" type="url" required />
+          <button type="submit" id="write-btn">Write</button>
+        </form>
+      </div>
+      <div id="read" class="tabcontent">
+        <h4>Read contents of an NFC tag</h4>
+        <button type="submit" id="start-scan-btn">Start scan</button>
+        <button type="submit" id="stop-scan-btn">Stop scan</button>
+      </div>
+      <div id="log"></div>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
