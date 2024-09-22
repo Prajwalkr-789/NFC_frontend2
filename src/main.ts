@@ -26,11 +26,17 @@ document.querySelector("#url-form")?.addEventListener("submit", (e) => {
     .then(() => log("URL written"))
     .catch((e: Error) => log("Something went wrong: " + e.message));
 });
+
+const grantBtn = document.getElementById("grant-btn")!!;
+if (!("NDEFReader" in window)) {
+  grantBtn.style.display = "block";
+  document.getElementById("app")?.classList.add("disabled");
+  grantBtn.innerText = "Web nfc is not supported in this browser";
+}
 const nfcPermission = await navigator.permissions.query({
   name: "nfc" as PermissionName,
 });
 if (nfcPermission.state !== "granted") {
-  const grantBtn = document.getElementById("grant-btn")!!;
   document.getElementById("app")?.classList.add("disabled");
   grantBtn.style.display = "block";
   grantBtn.onclick = async () => {
