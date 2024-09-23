@@ -32,6 +32,11 @@ if (!("NDEFReader" in window)) {
   grantBtn.style.display = "block";
   document.getElementById("app")?.classList.add("disabled");
   grantBtn.innerText = "Web nfc is not supported in this browser";
+  grantBtn.onclick = async () => {
+    let url =
+      "https://developer.mozilla.org/en-US/docs/Web/API/Web_NFC_API#browser_compatibility";
+    window.open(url);
+  };
 }
 const nfcPermission = await navigator.permissions.query({
   name: "nfc" as PermissionName,
