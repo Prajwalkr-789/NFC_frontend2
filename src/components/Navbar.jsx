@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,33 +40,33 @@ const Navbar = () => {
 
         {/* Right Section: Links */}
         <div className="hidden lg:flex mr-10 gap-6">
-          <a href="#home" className="text-lg  hover:underline hover:font-semibold">
+          <Link to="/home" className="text-lg hover:underline hover:font-semibold">
             Home
-          </a>
-          <Link to="/read"><h2  className="text-lg  hover:underline">
+          </Link>
+          <Link to="/read" className="text-lg hover:underline">
             Explore
-          </h2></Link>
-          <a href="#explore" className="text-lg  hover:underline">
+          </Link>
+          <Link to="/explore" className="text-lg hover:underline">
             Explore
-          </a>
-          <a href="#explore" className="text-lg  hover:underline">
+          </Link>
+          <Link to="/explore" className="text-lg hover:underline">
             Explore
-          </a>
-          <a href="#explore" className="text-lg  hover:underline">
+          </Link>
+          <Link to="/explore" className="text-lg hover:underline">
             Explore
-          </a>
+          </Link>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="lg:hidden flex flex-col items-center gap-4 py-4 bg-gray-700">
-          <a href="#home" className="text-lg hover:text-gray-300">
+          <Link to="/home" className="text-lg hover:text-gray-300">
             Home
-          </a>
-          <a href="#explore" className="text-lg hover:text-gray-300">
+          </Link>
+          <Link to="/explore" className="text-lg hover:text-gray-300">
             Explore
-          </a>
+          </Link>
         </div>
       )}
     </nav>
