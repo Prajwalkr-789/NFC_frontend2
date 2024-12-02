@@ -42,9 +42,9 @@ const Navbar = () => {
           <a href="#home" className="text-lg  hover:underline hover:font-semibold">
             Home
           </a>
-          <a href="#explore" className="text-lg  hover:underline">
+          <Link to="/read"><h2  className="text-lg  hover:underline">
             Explore
-          </a>
+          </h2></Link>
           <a href="#explore" className="text-lg  hover:underline">
             Explore
           </a>
