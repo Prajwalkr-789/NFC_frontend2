@@ -12,8 +12,6 @@
 </head>
 
 <body class="bg-gray-900 text-white">
-
-  <!-- Home Section -->
     <!-- Navbar Section -->
     <nav class="bg-gray-800 p-4">
       <div class="max-w-screen-xl mx-auto flex justify-between items-center">
@@ -25,9 +23,9 @@
   
         <!-- Navbar Links (Right) -->
         <div class="hidden md:flex space-x-8">
-          <a href="extra.html" class="text-white hover:text-gray-400 transition duration-300">Extra Features</a>
-          <a href="validate.html" class="text-white hover:text-gray-400 transition duration-300">Validate</a>
-          <a href="writeontag.html" class="text-white hover:text-gray-400 transition duration-300">Write on Tag</a>
+          <a href="/extra.html" class="text-white hover:text-gray-400 transition duration-300">Extra Features</a>
+          <a href="/validate.html" class="text-white hover:text-gray-400 transition duration-300">Validate</a>
+          <a href="/writeontag.html" class="text-white hover:text-gray-400 transition duration-300">Write on Tag</a>
         </div>
   
         <!-- Mobile Menu Button -->
@@ -41,10 +39,9 @@
   
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden hidden bg-gray-800 text-white p-4 space-y-4">
-      <a href="#read" class="block">Read</a>
-      <a href="#validate" class="block">Validate</a>
-      <a href="#extra-features" class="block">Extra Features</a>
-      <a href="#write-on-tag" class="block">Write on Tag</a>
+      <a href="/extra.html" class="text-white hover:text-gray-400 transition duration-300">Extra Features</a>
+      <a href="/validate.html" class="text-white hover:text-gray-400 transition duration-300">Validate</a>
+      <a href="/writeontag.html" class="text-white hover:text-gray-400 transition duration-300">Write on Tag</a>
     </div>
   
 
@@ -203,5 +200,13 @@
   </div>
 
 </body>
+<script>
+  // JavaScript to toggle the mobile menu visibility
+  const menuButton = document.getElementById("menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
 
+  menuButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden"); // Toggle 'hidden' class
+  });
+</script>
 </html>
