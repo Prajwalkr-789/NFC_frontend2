@@ -13,7 +13,7 @@ const Navbar = () => {
             alt="Logo"
             className="w-10 h-10 rounded-full"
           />
-          <span className="text-xl font-bold ml-2">YourCompany</span>
+          <span className="text-xl font-bold ml-2">CryptoShield</span>
         </div>
 
         {/* Hamburger Menu for Mobile */}
@@ -39,10 +39,19 @@ const Navbar = () => {
 
         {/* Right Section: Links */}
         <div className="hidden lg:flex mr-10 gap-6">
-          <a href="#home" className="text-lg hover:text-gray-300">
+          <a href="#home" className="text-lg  hover:underline hover:font-semibold">
             Home
           </a>
-          <a href="#explore" className="text-lg hover:text-gray-300">
+          <a href="#explore" className="text-lg  hover:underline">
+            Explore
+          </a>
+          <a href="#explore" className="text-lg  hover:underline">
+            Explore
+          </a>
+          <a href="#explore" className="text-lg  hover:underline">
+            Explore
+          </a>
+          <a href="#explore" className="text-lg  hover:underline">
             Explore
           </a>
         </div>

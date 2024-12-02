@@ -1,4 +1,4 @@
-import "./style.css";
+import "./index.css";
 import { URLTool } from "./tools/url.ts";
 import { WifiTool } from "./tools/wifi";
 import "./ui.ts";

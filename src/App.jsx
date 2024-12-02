@@ -4,6 +4,7 @@ import CreateUser from './components/CreateUser';
 import WriteCard from './components/WriteCard'
 import Navbar from './components/Navbar'
 import Home from './components/Home';
+import Reader from './components/Reader';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/createuser" element={<CreateUser />} />
+          <Route path="/read" element={<Reader />} />
           <Route path="/admin/write-tag" element={<WriteCard />} />
         </Routes>
       </div>
