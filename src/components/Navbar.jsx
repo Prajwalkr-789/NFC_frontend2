@@ -44,13 +44,13 @@ const Navbar = () => {
             Home
           </Link>
           <Link to="/read" className="text-lg hover:underline">
-            Explore
+            Read tag
           </Link>
-          <Link to="/extra" className="text-lg hover:underline">
-            extra
+          <Link to="/write" className="text-lg hover:underline">
+            Write tag
           </Link>
           <Link to="/validate" className="text-lg hover:underline">
-            Validate
+            Validate tag
           </Link>
           <Link to="/admin/write-tag" className="text-lg hover:underline">
             Write On Tag
@@ -65,10 +65,13 @@ const Navbar = () => {
             Home
           </Link>
           <Link to="/read" className="text-lg hover:text-gray-300">
-            Explore
+            Read Tag
           </Link>
-          <Link to="/extra" className="text-lg hover:text-gray-300">
-            extra
+          <Link to="/validate" className="text-lg hover:text-gray-300">
+            Validate
+          </Link>
+          <Link to="/write" className="text-lg hover:text-gray-300">
+            Write tag
           </Link>
           <Link to="/admin/write-tag" className="text-lg hover:text-gray-300">
             Write-on-tag
