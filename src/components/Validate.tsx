@@ -47,7 +47,9 @@ const Validate: React.FC = () => {
             headers: {
               "Content-Type": "application/json",
             },
-            body: "f346aff9f9517745fb7a695215157461b6eadcc337a7176127615af51f16356dcc9351e7be847974deaa03bd55ee6db9",
+            body: JSON.stringify({
+              tag: "f346aff9f9517745fb7a695215157461b6eadcc337a7176127615af51f16356dcc9351e7be847974deaa03bd55ee6db9",
+            }),
           });
 
           if (response.ok) {

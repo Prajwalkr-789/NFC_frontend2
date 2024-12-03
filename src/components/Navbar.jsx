@@ -40,7 +40,7 @@ const Navbar = () => {
 
         {/* Right Section: Links */}
         <div className="hidden lg:flex mr-10 gap-6">
-          <Link to="/home" className="text-lg hover:underline hover:font-semibold">
+          <Link to="/" className="text-lg hover:underline hover:font-semibold">
             Home
           </Link>
           <Link to="/read" className="text-lg hover:underline">
@@ -61,7 +61,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="lg:hidden flex flex-col items-center gap-4 py-4 bg-gray-700">
-          <Link to="/home" className="text-lg hover:text-gray-300">
+          <Link to="/" className="text-lg hover:text-gray-300">
             Home
           </Link>
           <Link to="/read" className="text-lg hover:text-gray-300">
