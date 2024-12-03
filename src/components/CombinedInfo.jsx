@@ -2,7 +2,7 @@ import React from "react";
 
 const CombinedInfo = () => {
   return (
-    <div className="h-screen bg-gradient-to-l from-gray-700 via-gray-800 to-gray-900">
+    <div className="min-h-screen bg-gradient-to-l from-gray-700 via-gray-800 to-gray-900">
     <div className="  text-white px-6 lg:px-24 py-16">
       {/* Hero Section */}
       <div className=" text-center mb-12">

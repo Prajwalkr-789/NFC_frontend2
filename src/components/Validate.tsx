@@ -40,13 +40,14 @@ const Validate: React.FC = () => {
         setIsScanning(false);
 
         // Send the tag data to the backend
+         
         try {
-          const response = await fetch("https://nfc-backend-4ue4.onrender.com/validateTag", {
+          const response = await fetch("https://nfc-backend-4ue4.onrender.com/api/validateTag", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify({ tagData }),
+            body: "f346aff9f9517745fb7a695215157461b6eadcc337a7176127615af51f16356dcc9351e7be847974deaa03bd55ee6db9",
           });
 
           if (response.ok) {

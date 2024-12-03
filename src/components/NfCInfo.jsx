@@ -2,7 +2,7 @@ import React from "react";
 
 const NFCInfo = () => {
   return (
-    <div className="h-screen bg-gradient-to-l from-gray-700 via-gray-800 to-gray-900 text-white px-6 lg:px-24 py-16">
+    <div className="min-h-screen bg-gradient-to-l from-gray-700 via-gray-800 to-gray-900 text-white px-6 lg:px-24 py-16">
       <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between">
         {/* Left Section */}
         <div className="lg:w-1/2 mb-8 lg:mb-0">

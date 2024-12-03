@@ -33,7 +33,7 @@ const Writer: React.FC = () => {
   };
 
   return (
-    <div className="p-4 border rounded shadow-md">
+    <div className="p-4 border rounded shadow-md mt-64">
       <h2 className="text-lg font-semibold mb-2">NFC Writer</h2>
       <div className="space-y-2">
         <input

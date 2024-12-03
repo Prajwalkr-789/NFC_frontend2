@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import CreateUser from './components/CreateUser';
-import WriteCard from './components/WriteCard'
 import Navbar from './components/Navbar'
 import Home from './components/Home';
 import Reader from './components/Reader';
@@ -22,7 +21,7 @@ function App() {
           <Route path="/write" element={<Writer />} />
           <Route path="/validate" element={<Validate />} />
           <Route path="/extra" element={<ExtraPage />} />
-          <Route path="/admin/write-tag" element={<WriteCard />} />
+          {/* <Route path="/admin/write-tag" element={<WriteCard />} /> */}
         </Routes>
       </div>
     </Router>
