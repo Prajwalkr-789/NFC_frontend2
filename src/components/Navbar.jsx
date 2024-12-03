@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const openExtraPage = () => {
-    window.location.href = "/Extra.html"; 
-  };
 
   return (
     <nav className="bg-gray-800 text-white fixed top-0 left-0 w-full">
@@ -46,15 +43,17 @@ const Navbar = () => {
           <Link to="/home" className="text-lg hover:underline hover:font-semibold">
             Home
           </Link>
-          <button onClick={openExtraPage}>Open Extra Page</button>
-          <Link to="/explore" className="text-lg hover:underline">
+          <Link to="/read" className="text-lg hover:underline">
             Explore
           </Link>
           <Link to="/explore" className="text-lg hover:underline">
             Explore
           </Link>
-          <Link to="/explore" className="text-lg hover:underline">
-            Explore
+          <Link to="/validate" className="text-lg hover:underline">
+            Validate
+          </Link>
+          <Link to="/admin/write-tag" className="text-lg hover:underline">
+            Write On Tag
           </Link>
         </div>
       </div>
@@ -65,7 +64,15 @@ const Navbar = () => {
           <Link to="/home" className="text-lg hover:text-gray-300">
             Home
           </Link>
-          <button onClick={openExtraPage}>Open Extra Page</button>
+          <Link to="/read" className="text-lg hover:text-gray-300">
+            Explore
+          </Link>
+          <Link to="/validate" className="text-lg hover:text-gray-300">
+            Validate
+          </Link>
+          <Link to="/admin/write-tag" className="text-lg hover:text-gray-300">
+            Write-on-tag
+          </Link>
         </div>
       )}
     </nav>

@@ -1,17 +1,11 @@
-import { useState, useEffect } from "react";
+import React from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
 
-function ExtraPage() {
-  const [htmlContent, setHtmlContent] = useState("");
-
-  useEffect(() => {
-    fetch("/Extra.html")
-      .then((response) => response.text())
-      .then((html) => setHtmlContent(html));
+const ExtraPage = () => {
+  React.useEffect(() => {
+    window.location.href = "/Extra.html";
   }, []);
-
-  return (
-    <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
-  );
-}
+  return null; // Render nothing as we're redirecting
+};
 
 export default ExtraPage;
