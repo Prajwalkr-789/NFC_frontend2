@@ -1,11 +1,10 @@
-import React from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
-
-const ExtraPage = () => {
-  React.useEffect(() => {
-    window.location.href = "/Extra.html";
-  }, []);
-  return null; // Render nothing as we're redirecting
-};
-
-export default ExtraPage;
+function ExtraPage() {
+  return (
+    <iframe
+      src="/Extra.html"
+      style={{ width: "100%", height: "100vh", border: "none" }}
+      title="Extra Page"
+    ></iframe>
+  );
+}
+export default ExtraPage

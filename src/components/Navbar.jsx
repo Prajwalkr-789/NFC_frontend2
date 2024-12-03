@@ -46,8 +46,8 @@ const Navbar = () => {
           <Link to="/read" className="text-lg hover:underline">
             Explore
           </Link>
-          <Link to="/explore" className="text-lg hover:underline">
-            Explore
+          <Link to="/extra" className="text-lg hover:underline">
+            extra
           </Link>
           <Link to="/validate" className="text-lg hover:underline">
             Validate
@@ -67,8 +67,8 @@ const Navbar = () => {
           <Link to="/read" className="text-lg hover:text-gray-300">
             Explore
           </Link>
-          <Link to="/validate" className="text-lg hover:text-gray-300">
-            Validate
+          <Link to="/extra" className="text-lg hover:text-gray-300">
+            extra
           </Link>
           <Link to="/admin/write-tag" className="text-lg hover:text-gray-300">
             Write-on-tag
