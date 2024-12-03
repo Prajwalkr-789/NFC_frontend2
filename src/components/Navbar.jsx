@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const openExtraPage = () => {
+    window.location.href = "/Extra.html"; 
+  };
 
   return (
     <nav className="bg-gray-800 text-white fixed top-0 left-0 w-full">
@@ -43,9 +46,7 @@ const Navbar = () => {
           <Link to="/home" className="text-lg hover:underline hover:font-semibold">
             Home
           </Link>
-          <Link to="/read" className="text-lg hover:underline">
-            Explore
-          </Link>
+          <button onClick={openExtraPage}>Open Extra Page</button>
           <Link to="/explore" className="text-lg hover:underline">
             Explore
           </Link>
@@ -64,9 +65,7 @@ const Navbar = () => {
           <Link to="/home" className="text-lg hover:text-gray-300">
             Home
           </Link>
-          <Link to="/read" className="text-lg hover:text-gray-300">
-            Explore
-          </Link>
+          <button onClick={openExtraPage}>Open Extra Page</button>
         </div>
       )}
     </nav>

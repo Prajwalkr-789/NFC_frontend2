@@ -6,6 +6,7 @@ import CombinedInfo from './CombinedInfo'
 import Footer from './Footer'
 
 function Home() {
+  
   return (
     <div>
       {/* <ul>
@@ -25,6 +26,7 @@ function Home() {
           <button className="bg-white text-black h  hover:shadow-[0px_0px_9px_gray] px-6 py-3 rounded-lg text-xl font-medium hover:shadow-gray-100 transition">
             Get started
           </button>
+          
           <button className="bg-white text-black h  hover:shadow-[0px_0px_9px_gray] px-6 py-3 rounded-lg text-xl font-medium hover:shadow-gray-100 transition">
             Explore
           </button>
