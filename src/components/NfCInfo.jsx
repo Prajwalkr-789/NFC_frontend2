@@ -1,4 +1,5 @@
 import React from "react";
+import imageofnfc from '../tools/nfc-technology-concept-illustration_114360-20326-removebg-preview.png'
 
 const NFCInfo = () => {
   return (
@@ -19,7 +20,7 @@ const NFCInfo = () => {
         {/* Right Section */}
         <div className="lg:w-1/2 flex justify-center">
           <img
-            src="https://via.placeholder.com/500x300"
+            src={imageofnfc}
             alt="NFC Technology"
             className="rounded-lg shadow-lg"
           />
