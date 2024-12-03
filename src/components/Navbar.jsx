@@ -64,7 +64,7 @@ const Navbar = () => {
           <Link to="/home" className="text-lg hover:text-gray-300">
             Home
           </Link>
-          <Link to="/explore" className="text-lg hover:text-gray-300">
+          <Link to="/read" className="text-lg hover:text-gray-300">
             Explore
           </Link>
         </div>
