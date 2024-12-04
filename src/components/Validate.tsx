@@ -23,7 +23,7 @@ const Validate: React.FC = () => {
       await ndef.scan();
 
       ndef.onreading = async (event: any) => {
-        const { message } = event; // Removed serialNumber usage
+        const { serialNumber, message } = event; // Removed serialNumber usage
         log("NFC tag read successfully. Stopping scan...");
 
         const decoder = new TextDecoder();
@@ -48,7 +48,8 @@ const Validate: React.FC = () => {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              encryptedData: "f346aff9f9517745fb7a695215157461b6eadcc337a7176127615af51f16356dcc9351e7be847974deaa03bd55ee6db9",
+              tid: serialNumber,
+              encryptedData: tagData,
             }),
           });
 
