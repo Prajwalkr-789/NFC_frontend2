@@ -3,7 +3,6 @@ import React, { useState } from "react";
 const Writer: React.FC = () => {
   const [logs, setLogs] = useState<string[]>([]);
   const [isWriting, setIsWriting] = useState(false);
-  const [textToWrite, setTextToWrite] = useState("");
   const [tagId, setTagId] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [token, setToken] = useState("");
