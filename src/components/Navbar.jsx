@@ -52,9 +52,9 @@ const Navbar = () => {
           <Link to="/validate" className="text-lg hover:underline">
             Validate tag
           </Link>
-          {/* <Link to="/admin/write-tag" className="text-lg hover:underline">
-            Write On Tag
-          </Link> */}
+          <Link to="/createuser" className="text-lg hover:underline">
+            Create User
+          </Link>
         </div>
       </div>
 
@@ -73,8 +73,8 @@ const Navbar = () => {
           <Link to="/write" className="text-lg hover:text-gray-300">
             Write tag
           </Link>
-          <Link to="/admin/write-tag" className="text-lg hover:text-gray-300">
-            Write-on-tag
+          <Link to="/createuser" className="text-lg hover:underline">
+            Create User
           </Link>
         </div>
       )}
