@@ -18,7 +18,7 @@ function Home() {
       </ul> */}
       <div className="flex flex-col lg:flex-row items-center  justify-center h-screen bg-gradient-to-l from-gray-700 via-gray-800 to-gray-900 text-white mt-5">
       {/* Left Section */}
-      <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start px-6 lg:px-16 text-center lg:text-left">
+      <div className="w-full lg:w-1/2 flex flex-col mt-10 items-center lg:items-start px-6 lg:px-16 text-center lg:text-left">
         <h1 className="text-4xl lg:text-6xl font-bold mb-4">CryptoShield</h1>
         <p className="text-lg lg:text-xl mb-6">
         A secure solution combining RFID technology with advanced cryptographic algorithms to ensure data protection and unauthorized access prevention

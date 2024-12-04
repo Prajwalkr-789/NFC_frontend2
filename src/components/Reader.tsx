@@ -48,33 +48,44 @@ const Reader: React.FC = () => {
   };
 
   return (
-    <div className="p-4 border rounded shadow-md">
-      <h2 className="text-lg font-semibold mb-2">NFC Reader</h2>
-      <div className="space-y-2">
-        <button
-          onClick={startScan}
-          className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
-          disabled={isScanning}
-        >
-          Start Scan
-        </button>
-        <button
-          onClick={stopScan}
-          className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
-          disabled={!isScanning}
-        >
-          Stop Scan
-        </button>
-      </div>
-      <div className="mt-4">
-        <h3 className="text-sm font-bold">Logs:</h3>
-        <div className="bg-gray-100 p-2 rounded border h-40 overflow-y-auto">
-          {logs.map((log, index) => (
-            <div key={index}>{`> ${log}`}</div>
-          ))}
-        </div>
-      </div>
+    <div className="h-screen bg-gradient-to-l from-gray-700 via-gray-800 to-gray-900 flex justify-center items-center">
+<div className="p-10 rounded-lg shadow-lg w-8/12 mx-auto bg-white text-gray-900">
+  <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
+    NFC Reader
+  </h2>
+  <div className="flex flex-col sm:flex-row justify-between gap-4 sm:gap-6 items-center">
+    <button
+      onClick={startScan}
+      className="w-full sm:w-auto px-6 py-3 text-lg font-medium bg-green-600 text-white rounded-lg shadow hover:bg-green-500 transition-all disabled:bg-green-300 disabled:cursor-not-allowed"
+      disabled={isScanning}
+    >
+      Start Scan
+    </button>
+    <button
+      onClick={stopScan}
+      className="w-full sm:w-auto px-6 py-3 text-lg font-medium bg-red-600 text-white rounded-lg shadow hover:bg-red-500 transition-all disabled:bg-red-300 disabled:cursor-not-allowed"
+      disabled={!isScanning}
+    >
+      Stop Scan
+    </button>
+  </div>
+  <div className="mt-6">
+    <h3 className="text-lg font-semibold mb-4 text-gray-800">Logs:</h3>
+    <div className="bg-white text-gray-700 p-4 rounded-lg border border-gray-500 h-40 overflow-y-auto">
+      {logs.length > 0 ? (
+        logs.map((log, index) => (
+          <div key={index} className="mb-2 text-sm font-medium">{`> ${log}`}</div>
+        ))
+      ) : (
+        <div className="text-sm italic text-gray-500">No logs available.</div>
+      )}
     </div>
+  </div>
+</div>
+
+
+</div>
+
   );
 };
 

@@ -80,41 +80,57 @@ const Validate: React.FC = () => {
   };
 
   return (
-    <div className="p-4 border rounded shadow-md">
-      <h2 className="text-lg font-semibold mb-2">NFC Reader</h2>
-      <div className="space-y-2">
-        <button
-          onClick={startScan}
-          className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
-          disabled={isScanning}
-        >
-          Start Scan
-        </button>
-        <button
-          onClick={stopScan}
-          className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
-          disabled={!isScanning}
-        >
-          Stop Scan
-        </button>
-      </div>
-      <div className="mt-4">
-        <h3 className="text-sm font-bold">Logs:</h3>
-        <div className="bg-gray-100 p-2 rounded border h-40 overflow-y-auto">
-          {logs.map((log, index) => (
-            <div key={index}>{`> ${log}`}</div>
-          ))}
-        </div>
-      </div>
-
-      {response && (
-        <div className="mt-4 p-4 bg-green-100 border border-green-300 rounded">
-          <h3 className="text-sm font-bold">Validation Result:</h3>
-          <p><strong>Name:</strong> {response.name}</p>
-          <p><strong>Message:</strong> {response.message}</p>
-        </div>
-      )}
+    <div className="bg-gradient-to-l from-gray-700 via-gray-800 to-gray-900 h-screen p-10">
+    <div className="p-6 rounded-lg shadow-lg max-w-full sm:max-w-lg lg:max-w-xl  mx-auto bg-white text-gray-900 mt-10">
+    <h2 className="text-xl font-bold mb-4 text-center text-gray-800">NFC Reader</h2>
+    
+    <div className="flex flex-col sm:flex-row justify-between gap-4 items-center">
+      <button
+        onClick={startScan}
+        className={`w-full sm:w-auto px-6 py-3 text-lg font-medium text-white bg-green-600 rounded-lg shadow hover:bg-green-500 transition ${
+          isScanning ? "bg-green-300 cursor-not-allowed" : ""
+        }`}
+        disabled={isScanning}
+      >
+        Start Scan
+      </button>
+      <button
+        onClick={stopScan}
+        className={`w-full sm:w-auto px-6 py-3 text-lg font-medium text-white bg-red-600 rounded-lg shadow hover:bg-red-500 transition ${
+          !isScanning ? "bg-red-300 cursor-not-allowed" : ""
+        }`}
+        disabled={!isScanning}
+      >
+        Stop Scan
+      </button>
     </div>
+    
+    <div className="mt-6">
+      <h3 className="text-lg font-semibold mb-4 text-gray-800">Logs:</h3>
+      <div className="bg-gray-100 text-gray-700 p-4 rounded-lg border border-gray-300 h-40 overflow-y-auto">
+        {logs.length > 0 ? (
+          logs.map((log, index) => (
+            <div key={index} className="text-sm font-medium mb-1">{`> ${log}`}</div>
+          ))
+        ) : (
+          <div className="text-sm italic text-gray-500">No logs available.</div>
+        )}
+      </div>
+    </div>
+  
+    {response && (
+      <div className="mt-6 p-6 bg-green-50 border border-green-300 rounded-lg">
+        <h3 className="text-lg font-semibold text-green-700 mb-2">Validation Result:</h3>
+        <p className="text-gray-800">
+          <strong>Name:</strong> {response.name}
+        </p>
+        <p className="text-gray-800">
+          <strong>Message:</strong> {response.message}
+        </p>
+      </div>
+    )}
+  </div>
+  </div>
   );
 };
 

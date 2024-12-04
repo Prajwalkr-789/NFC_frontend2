@@ -10,9 +10,9 @@ const Navbar = () => {
         {/* Left Section: Logo and Name */}
         <div className="flex items-center">
           <img
-            src="https://via.placeholder.com/40"
+            src="https://cdn-icons-png.flaticon.com/128/6871/6871676.png"
             alt="Logo"
-            className="w-10 h-10 rounded-full"
+            className="w-10 h-10 rounded-full invert"
           />
           <span className="text-xl font-bold ml-2">CryptoShield</span>
         </div>
@@ -52,9 +52,9 @@ const Navbar = () => {
           <Link to="/validate" className="text-lg hover:underline">
             Validate tag
           </Link>
-          <Link to="/admin/write-tag" className="text-lg hover:underline">
+          {/* <Link to="/admin/write-tag" className="text-lg hover:underline">
             Write On Tag
-          </Link>
+          </Link> */}
         </div>
       </div>
 

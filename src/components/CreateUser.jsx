@@ -2,7 +2,7 @@ import React from "react";
 
 const Createuser = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-400 to-indigo-600 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-l from-gray-700 via-gray-800 to-gray-900 p-4">
       <div className="w-full max-w-md bg-white rounded-lg shadow-lg p-6">
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-4">
           Welcome! 👋
