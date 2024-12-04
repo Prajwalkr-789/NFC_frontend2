@@ -19,35 +19,38 @@ const Writer: React.FC = () => {
     }
 
     try {
-      const ndef = new NDEFReader();
-      log("Hold an NFC tag near your device to write.");
+      log("Sending data to the backend...");
 
-      setIsWriting(true);
-      await ndef.write({
-        records: [{ recordType: "text", data: textToWrite }],
+      // Send the data to the backend
+      const response = await fetch("https://nfc-backend-4ue4.onrender.com/api/writeontag", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ tagId, phoneNumber, token }),
       });
 
-      log("Data written successfully to the NFC tag.");
+      if (!response.ok) {
+        log("Failed to send data to the backend.");
+        return;
+      }
 
-      // Send data to the backend
+      const data = await response.json();
+      log("Data successfully sent to the backend.");
+      log("Received response from backend. Writing to NFC tag...");
+
+      // Proceed to write the backend response to the NFC tag
       try {
-        const response = await fetch("https://nfc-backend-4ue4.onrender.com/api/writeontag", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ tagId, phoneNumber, token }),
+        const ndef = new NDEFReader();
+        setIsWriting(true);
+        await ndef.write({
+          records: [{ recordType: "text", data: data.encryptedData }],
         });
 
-        if (response.ok) {
-          const data = await response.json();
-          log("Data successfully sent to the backend.");
-          setResponse(data);
-        } else {
-          log("Failed to send data to the backend.");
-        }
-      } catch (error: any) {
-        log(`Error sending data to backend: ${error.message}`);
+        log("Data written successfully to the NFC tag.");
+        setResponse(data); // Save backend response for display (if needed)
+      } catch (writeError: any) {
+        log(`Error writing data to NFC tag: ${writeError.message}`);
       }
     } catch (error: any) {
       log(`Error: ${error.message}`);
