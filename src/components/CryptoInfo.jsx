@@ -16,6 +16,7 @@ const CryptoInfo = () => {
             </p>
           </div>
           <div className="lg:w-1/2 flex justify-center mt-8 lg:mt-0">
+          <h2 className="text-2xl">AES</h2>
             <img
               src="https://via.placeholder.com/400x250"
               alt="AES Encryption"

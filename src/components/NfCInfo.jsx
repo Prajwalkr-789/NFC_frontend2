@@ -1,5 +1,6 @@
 import React from "react";
-import imageofnfc from '../tools/nfc-technology-concept-illustration_114360-20326-removebg-preview.png'
+import imageofnfc from '../tools/8260896-removebg-preview.png'
+
 
 const NFCInfo = () => {
   return (

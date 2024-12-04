@@ -1,4 +1,9 @@
 import React from "react";
+import nfctech from '../tools/12639887-removebg-preview.png'
+import crypto from '../tools/17744648-removebg-preview.png'
+import combine from '../tools/8654151-removebg-preview.png'
+
+
 
 const CombinedInfo = () => {
   return (
@@ -20,7 +25,7 @@ const CombinedInfo = () => {
         <div className="bg-blue-500 p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-[1.1] transition duration-300">
           <div className="flex justify-center mb-4">
             <img
-              src="https://via.placeholder.com/100"
+              src={nfctech}
               alt="NFC Icon"
               className="w-20 h-20"
             />
@@ -35,7 +40,7 @@ const CombinedInfo = () => {
         <div className="bg-yellow-500 text-white to- p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-[1.1] transition duration-300">
           <div className="flex justify-center mb-4">
             <img
-              src="https://via.placeholder.com/100"
+              src={crypto}
               alt="Cryptography Icon"
               className="w-20 h-20"
             />
@@ -50,7 +55,7 @@ const CombinedInfo = () => {
         <div className="bg-green-500 p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-[1.1] transition duration-300">
           <div className="flex justify-center mb-4">
             <img
-              src="https://via.placeholder.com/100"
+              src={combine}
               alt="Secure Systems Icon"
               className="w-20 h-20"
             />
