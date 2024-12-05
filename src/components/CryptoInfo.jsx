@@ -1,4 +1,9 @@
 import React from "react";
+import aes from '../tools/illustrated-hacker-activity-concept_23-2148534299-removebg-preview.png'
+import res from '../tools/security-concept-illustration_114360-1528-removebg-preview.png'
+import ecc from '../tools/3d-cartoon-style-bunch-keys-icon-white-background-realistic-modern-keys-new-apartment-house-hotel-room-ring-flat-vector-illustration-entrance-security-property-concept_778687-980-removebg-preview.png'
+
+
 
 const CryptoInfo = () => {
   return (
@@ -18,7 +23,7 @@ const CryptoInfo = () => {
           <div className="lg:w-1/2 flex justify-center mt-8 lg:mt-0">
           <h2 className="text-2xl">AES</h2>
             <img
-              src="https://via.placeholder.com/400x250"
+              src={aes}
               alt="AES Encryption"
               className="rounded-lg shadow-lg w-full max-w-md"
             />
@@ -35,7 +40,7 @@ const CryptoInfo = () => {
           </div>
           <div className="lg:w-1/2 flex justify-center mt-8 lg:mt-0">
             <img
-              src="https://via.placeholder.com/400x250"
+              src={res}
               alt="RSA Encryption"
               className="rounded-lg shadow-lg w-full max-w-md"
             />
@@ -52,7 +57,7 @@ const CryptoInfo = () => {
           </div>
           <div className="lg:w-1/2 flex justify-center mt-8 lg:mt-0">
             <img
-              src="https://via.placeholder.com/400x250"
+              src={ecc}
               alt="ECC Encryption"
               className="rounded-lg shadow-lg w-full max-w-md"
             />
